@@ -1,6 +1,10 @@
 # magento2-search-fix
 Magento2 module for fixing hanging "insert to" search_tmp queries
 
+## tested on magento:
+- 2.2.10
+- 2.3.1
+
 # Installation
 ## via composer
 Run the following command in Magento2 root folder:
