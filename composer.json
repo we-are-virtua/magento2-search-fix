@@ -1,0 +1,41 @@
+{
+  "name": "we-are-virtua/magento2-search-fix",
+  "description": "Magento2 module for fixing hanging 'insert to' search_tmp queries",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "keywords": [
+    "magento 2", "virtua", "we-are-virtua", "search fix", "magento2", "search", "fix"
+  ],
+  "authors": [
+    {
+      "name": "Virtua",
+      "email": "contact@wearevirtua.com",
+      "homepage": "https://wearevirtua.com"
+    },
+    {
+      "name": "Sebastian Ruchlewicz",
+      "email": "s.ruchlewicz@wearevirtua.com",
+      "role": "Technical Support"
+    }
+  ],
+  "require": {
+    "php": "~7.0.13|~7.1.0|~7.2.0",
+    "magento/framework": "100.*|101.*|102.*",
+    "magento/module-catalog-search": "100.2.*|101.0.*",
+    "magento/module-store": "100.2.*|101.0.*",
+    "magento/module-catalog": "102.0.*|103.0.*",
+    "magento/module-eav": "101.0.*|102.0.*"
+  },
+  "autoload": {
+    "files": [
+      "./registration.php"
+    ],
+    "psr-4": {
+      "Virtua\\SearchFix\\": "src/SearchFix/"
+    }
+  }
+}

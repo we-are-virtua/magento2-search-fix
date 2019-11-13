@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Indexer\Category\Product\Action\Full">
+        <arguments>
+            <argument name="batchRowsCount" xsi:type="number">5000</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\BatchSizeCalculator">
+        <arguments>
+            <argument name="batchRowsCount" xsi:type="array">
+                <item name="configurable" xsi:type="number">5000</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Magento\CatalogSearch\Model\Search\FilterMapper\VisibilityFilter"
+                type="Virtua\SearchFix\Rewrite\Magento\CatalogSearch\Model\Search\FilterMapper\VisibilityFilter" />
+    <preference for="Magento\CatalogSearch\Model\Search\FilterMapper\CustomAttributeFilter"
+                type="Virtua\SearchFix\Rewrite\Magento\CatalogSearch\Model\Search\FilterMapper\CustomAttributeFilter" />
+</config>
